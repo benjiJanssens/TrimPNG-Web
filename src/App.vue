@@ -40,7 +40,7 @@
                   :loading="!Boolean(imageTrimmed)"
                   tag="a"
                   :href="imageTrimmed"
-                  :download="imageName"
+                  :download="`trimpng_${imageName}`"
                   >Download</b-button
                 >
                 <b-button type="is-danger" expanded @click="resetImage"
