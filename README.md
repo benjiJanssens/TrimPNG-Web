@@ -6,16 +6,8 @@ TrimPNG is a web app based on [trimPNG](https://github.com/benjiJanssens/trimPNG
 
 Use the package manager [npm](https://www.npmjs.com) or [Yarn](https://yarnpkg.com) to install the dependencies.
 
-### npm
-
 ```bash
-npm install trimpng
-```
-
-### Yarn
-
-```bash
-yarn add trimpng
+npm/yarn install
 ```
 
 ## Usage
