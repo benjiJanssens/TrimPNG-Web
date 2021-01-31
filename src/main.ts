@@ -7,6 +7,9 @@ import Buefy from "buefy";
 import "./stylesheets/bulma.scss";
 Vue.use(Buefy);
 
+// Material Design Icons
+import "@mdi/font/css/materialdesignicons.min.css";
+
 Vue.config.productionTip = false;
 
 new Vue({
