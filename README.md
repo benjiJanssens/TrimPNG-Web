@@ -1,24 +1,44 @@
-# trimpng
+# TrimPNG
 
-## Project setup
-```
-npm install
+TrimPNG is a web app based on [trimPNG](https://github.com/benjiJanssens/trimPNG)
+
+## Installation
+
+Use the package manager [npm](https://www.npmjs.com) or [Yarn](https://yarnpkg.com) to install the dependencies.
+
+### npm
+
+```bash
+npm install trimpng
 ```
 
-### Compiles and hot-reloads for development
+### Yarn
+
+```bash
+yarn add trimpng
+```
+
+## Usage
+
+### Start in development mode
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Build for production
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Lint and fix the files
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit)
