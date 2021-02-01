@@ -4,6 +4,7 @@ import { Component } from "vue-property-decorator";
 @Component
 export default class Update extends Vue {
   registration: ServiceWorkerRegistration | null = null;
+  isRefreshing = false;
 
   created() {
     document.addEventListener(
@@ -16,7 +17,10 @@ export default class Update extends Vue {
     );
 
     navigator.serviceWorker.addEventListener("controllerchange", () => {
-      window.location.reload();
+      if (!this.isRefreshing) {
+        this.isRefreshing = true;
+        window.location.reload();
+      }
     });
   }
 }
