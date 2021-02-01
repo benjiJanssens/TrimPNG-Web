@@ -38,7 +38,7 @@
                 </div>
               </div>
               <div class="columns is-centered is-vcentered">
-                <div class="column is-12-mobile is-9-tablet is-6-desktop">
+                <div class="column is-12-mobile is-9-tablet">
                   <div class="buttons">
                     <b-button
                       type="is-primary"
