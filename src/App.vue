@@ -74,11 +74,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Mixins, Watch } from "vue-property-decorator";
 import trimPNG from "trimpng";
+import Update from "./mixins/update";
 
 @Component
-export default class App extends Vue {
+export default class App extends Mixins(Update) {
   imageName = "";
   imageToTrim: string | null = null;
   imageTrimmed: string | null = null;
@@ -106,6 +107,20 @@ export default class App extends Vue {
     this.imageName = "";
     this.imageToTrim = null;
     this.imageTrimmed = null;
+  }
+
+  @Watch("registration")
+  onChildChanged(value: string) {
+    if (value)
+      this.$buefy.snackbar.open({
+        message: "TrimPNG has been updated. Refresh to apply changes.",
+        actionText: "Refresh",
+        indefinite: true,
+        onAction: () => {
+          if (this.registration && this.registration.waiting)
+            this.registration.waiting.postMessage({ type: "SKIP_WAITING" });
+        }
+      });
   }
 }
 </script>
