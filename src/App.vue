@@ -115,6 +115,7 @@ export default class App extends Mixins(Update) {
       this.$buefy.snackbar.open({
         message: "TrimPNG has been updated. Refresh to apply changes.",
         actionText: "Refresh",
+        type: "is-warning",
         indefinite: true,
         onAction: () => {
           if (this.registration && this.registration.waiting)
